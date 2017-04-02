@@ -46,5 +46,5 @@ const loginUserSuccess = (dispatch, user) => {
   })
 
   // Imported an Actions object. employeeList is the key property of the EmployeeList compoenent in Router.js
-  Actions.employeeList()
+  Actions.main()
 }
