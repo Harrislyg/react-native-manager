@@ -1,8 +1,9 @@
 import React from 'react'
 import { View } from 'react-native'
 const CardSection = (props) => {
+  // style on the right of the array will overwrite the style on the left of the array
   return (
-    <View style={styles.containerStyle}>
+    <View style={[styles.containerStyle, props.style]}>
       {props.children}
     </View>
   )
