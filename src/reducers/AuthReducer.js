@@ -14,12 +14,12 @@ export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case EMAIL_CHANGED:
       // explicitly return a newly defined object to ensure that state is changed and not assigned to the same variable
-      return { ...state, email: action.payload }
+      return { ...state, email: action.payload };
     case PASSWORD_CHANGED:
-      return {...state, password: action.payload}
+      return {...state, password: action.payload};
     case LOGIN_USER:
       // clear the existing error message when the application is still loading
-      return {...state, loading: true, error: ''}
+      return {...state, loading: true, error: ''};
     case LOGIN_USER_SUCCESS:
       // save the user model on the state.auth.user piece of state
       return {
@@ -34,8 +34,8 @@ export default (state = INITIAL_STATE, action) => {
         // password: ''
       }
     case LOGIN_USER_FAIL:
-      return {...state, error: 'Authentication Failed.', password: '', loading: false}
+      return {...state, error: 'Authentication Failed.', password: '', loading: false};
     default:
-      return state
+      return state;
   }
 }
